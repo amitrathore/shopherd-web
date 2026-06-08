@@ -441,6 +441,42 @@ ul{list-style:none}
 .pricing__row:last-child{border-bottom:0}
 .pricing__row em{font-style:normal;opacity:.55;font-size:12px;margin-left:6px}
 
+/* ───── contact (tally) ───── */
+.block--contact{
+  background:var(--ink);color:var(--cream);
+  padding:120px 28px;
+  position:relative;overflow:hidden;
+}
+.block--contact::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(224,36,155,.25), transparent 45%),
+    radial-gradient(circle at 10% 90%, rgba(215,255,58,.18), transparent 50%);
+  pointer-events:none;
+}
+.contact__inner{
+  position:relative;z-index:1;
+  max-width:var(--maxw);margin:0 auto;
+  display:grid;grid-template-columns:.95fr 1.05fr;gap:80px;align-items:start;
+}
+.contact__head .h2{margin-bottom:20px}
+.contact__lede{color:#c8c8d2;font-size:18px;max-width:46ch}
+.contact__form{
+  background:var(--cream);color:var(--ink);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:14px 14px 0 var(--magenta);
+  position:relative;
+}
+.contact__form iframe{
+  display:block;width:100%;border:0;border-radius:14px;background:transparent;
+  min-height:520px;
+}
+@media(max-width:880px){
+  .contact__inner{grid-template-columns:1fr;gap:48px}
+  .block--contact{padding:80px 22px}
+}
+
 /* ───── footer ───── */
 .foot{
   background:var(--ink);color:var(--cream);
